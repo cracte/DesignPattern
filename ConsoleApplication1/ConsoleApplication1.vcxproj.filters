@@ -59,5 +59,20 @@
     <ClInclude Include="Memento.h">
       <Filter>资源文件</Filter>
     </ClInclude>
+    <ClInclude Include="Composite.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Bridge.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Chain.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -11,6 +11,11 @@
 #include "State.h"
 #include "Adapter.h"
 #include "Memento.h"
+#include "Composite.h"
+#include "Singleton.h"
+#include "Bridge.h"
+#include "Command.h"
+#include "Chain.h"
 
 void main()
 {
@@ -71,14 +76,56 @@ void main()
     //Adapter* adapter = new Adapter();
     //adapter->print();
 
-    Originator* orig = new Originator(1, 2);
-    orig->print();
-    Caretaker* taker = new Caretaker();
-    taker->setMemento(orig->createMemento());
-    orig->setState(4);
-    orig->print();
-    orig->recoverMemento(taker->getMemento());
-    orig->print();
+    //Originator* orig = new Originator(1, 2);
+    //orig->print();
+    //Caretaker* taker = new Caretaker();
+    //taker->setMemento(orig->createMemento());
+    //orig->setState(4);
+    //orig->print();
+    //orig->recoverMemento(taker->getMemento());
+    //orig->print();
+
+    //Composite* root = new Composite("root");
+    //Composite* com1 = new Composite("a");
+    //root->addNode(com1);
+    //Composite* com2 = new Composite("f");
+    //com1->addNode(com2);
+    //Composite* com3 = new Composite("d");
+    //Composite* com4 = new Composite("r");
+    //com1->addNode(com3);
+    //Leaf* leaf1 = new Leaf("L1");
+    //com3->addNode(com4);
+    //com3->addNode(leaf1);
+    //Leaf* leaf2 = new Leaf("L2");
+    //com4->addNode(leaf2);
+    //root->display(2);
+
+    //Singleton::instance()->print();
+    //Singleton::instance()->print();
+
+    //ConcreteImplementor2* implementor = new ConcreteImplementor2();
+    //RefinedAbstraction* refined = new RefinedAbstraction();
+    //refined->setImplementor(implementor);
+    //refined->operation();
+
+    //Receiver* receiver = new Receiver();
+    //ConcreteCommand2* command1 = new ConcreteCommand2(receiver);
+    //ConcreteCommand1* command2 = new ConcreteCommand1(receiver);
+    //ConcreteCommand1* command3 = new ConcreteCommand1(receiver);
+    //Invoker* invoker = new Invoker();
+    //invoker->addCommand(command1);
+    //invoker->addCommand(command2);
+    //invoker->addCommand(command3);
+    //invoker->executeCommand();
+
+    ConcreteHandler1* handler1 = new ConcreteHandler1();
+    ConcreteHandler2* handler2 = new ConcreteHandler2();
+    ConcreteHandler3* handler3 = new ConcreteHandler3();
+    handler1->setSuccessor(handler2);
+    handler2->setSuccessor(handler3);
+    handler1->handleRequest(3);
+    handler1->handleRequest(14);
+    handler1->handleRequest(25);
 
     char a;
     scanf_s("%s",&a);
