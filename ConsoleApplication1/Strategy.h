@@ -29,14 +29,14 @@ class StrategyC :public Strategy
     }
 };
 
-class Context
+class Market
 {
 public:
-    Context()
+    Market()
     {
 
     }
-    static Context instacne()
+    static Market instacne()
     {
         return m_context;
     }
@@ -47,5 +47,5 @@ public:
     }
 
 private:
-    static Context m_context;
+    static Market m_context;
 };

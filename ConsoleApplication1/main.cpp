@@ -16,6 +16,10 @@
 #include "Bridge.h"
 #include "Command.h"
 #include "Chain.h"
+#include "Mediator.h"
+#include "Flyweight.h"
+#include "Interpreter.h"
+#include "Visitor.h"
 
 void main()
 {
@@ -118,14 +122,40 @@ void main()
     //invoker->addCommand(command3);
     //invoker->executeCommand();
 
-    ConcreteHandler1* handler1 = new ConcreteHandler1();
-    ConcreteHandler2* handler2 = new ConcreteHandler2();
-    ConcreteHandler3* handler3 = new ConcreteHandler3();
-    handler1->setSuccessor(handler2);
-    handler2->setSuccessor(handler3);
-    handler1->handleRequest(3);
-    handler1->handleRequest(14);
-    handler1->handleRequest(25);
+    //ConcreteHandler1* handler1 = new ConcreteHandler1();
+    //ConcreteHandler2* handler2 = new ConcreteHandler2();
+    //ConcreteHandler3* handler3 = new ConcreteHandler3();
+    //handler1->setSuccessor(handler2);
+    //handler2->setSuccessor(handler3);
+    //handler1->handleRequest(3);
+    //handler1->handleRequest(14);
+    //handler1->handleRequest(25);
+
+    //Mediator* mediator = new Mediator();
+    //ConcreteColleague1* colleague1 = new ConcreteColleague1(mediator);
+    //ConcreteColleague2* colleague2 = new ConcreteColleague2(mediator);
+    //mediator->setColleague1(colleague1);
+    //mediator->setColleague2(colleague2);
+    //colleague1->send("b");
+    //colleague2->send("a");
+
+    //FlyweightFactory* ff = new FlyweightFactory();
+    //ff->getFlyweight(1)->operation(5);
+    //ff->getFlyweight(3)->operation(7);
+
+    //Context* context = new Context();
+    //context->setString("aabcac");
+    //context->interpreter();
+
+    ConcreteElementA* elementA = new ConcreteElementA();
+    ConcreteElementB* elementB = new ConcreteElementB();
+    ObjectStructure* obj = new ObjectStructure();
+    obj->addElement(elementA);
+    obj->addElement(elementB);
+    ConcreteVisitor1* visitor1 = new ConcreteVisitor1();
+    ConcreteVisitor2* visitor2 = new ConcreteVisitor2();
+    obj->accept(visitor1);
+    obj->accept(visitor2);
 
     char a;
     scanf_s("%s",&a);

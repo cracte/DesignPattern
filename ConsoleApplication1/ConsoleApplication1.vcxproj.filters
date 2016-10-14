@@ -74,5 +74,17 @@
     <ClInclude Include="Chain.h">
       <Filter>资源文件</Filter>
     </ClInclude>
+    <ClInclude Include="Mediator.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Flyweight.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Interpreter.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Visitor.h">
+      <Filter>资源文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
