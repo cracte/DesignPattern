@@ -2,10 +2,11 @@
 
 class Memento
 {
+    friend class Originator;
     private:
     int m_state;
     int m_index;
-    public:
+    private:
     Memento(int state, int index)
     {
         m_state = state;

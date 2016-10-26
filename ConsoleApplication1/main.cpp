@@ -24,7 +24,7 @@
 void main()
 {
     //StrategyA* strategy = new StrategyA(); //现在使用的策略
-    //Context::instacne().print(strategy);
+    //Market::instacne().print(strategy);
 
     //ConcreteEntity* entity = new ConcreteEntity(); //需要装饰的实体
     //ConcreteDecorateA* decorateA = new ConcreteDecorateA(); //依次添加装饰
@@ -54,7 +54,7 @@ void main()
 
     //Director* diector = new Director();
     //ConcreteBuilder2* builder = new ConcreteBuilder2(); //具体创建者
-    //diector->Construct(builder); //知道创建者创建步骤
+    //diector->Construct(builder); //指导创建者创建步骤
     //Manufacture* manu = builder->output();
     //manu->print();
 
